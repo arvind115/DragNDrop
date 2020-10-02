@@ -11,7 +11,7 @@ In total, 3 types of tasks lists are implemented namely, 'working','todo', & 'do
 - Any data that might come handy to handle update, can be captured in **onDragStart** event. This event is fired by the **draggable** element. That data can be stored in dataTransfer object.
 - In the provided implementation, a single Task is represented by <div> containing a class "draggableTaskDiv". This <div> has the **draggable** attribute & handles the **onDragStart** event. Each Task can be identified by a unique id. This id is captured in onDragStart event & stored in dataTransfer object.
 
-A list of certain type is represented by a <div> that handles **onDragOver** and **onDrop** events. Default behavior is prevented when onDragOver is fired, while in case of onDrop, a function is called to handle updates.
+A list of certain type is represented by a `<div>` that handles **onDragOver** and **onDrop** events. Default behavior is prevented when onDragOver is fired, while in case of onDrop, a function is called to handle updates.
 
 The global state of tasks of all categories is stored in **tasks** array, which can be mutated using **setTasks** function. The state of all 3 types of list is stored separately in 3 different arrays, which in turn, have their own functions associated with them for handling mutations. Yes, we're using useState hook. All the 3 arrays depend upon tasks array for their state.
 
